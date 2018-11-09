@@ -35,7 +35,7 @@ Gamma
 
 
 
-本节，我们主要对KPOINTS的文件的第四行进行批量操作，将1 1 1改成 2 2 2， 3 3 3 。首先浏览下面的命令：
+本节，我们主要对KPOINTS的文件的第四行进行批量操作，将1 1 1改成 2 2 2， 3 3 3 等。首先浏览下面的命令：
 
 ```
 iciq-lq@ln3:/THFS/home/iciq-lq/LVASPTHW$ ls
@@ -99,7 +99,7 @@ iciq-lq@ln3:/THFS/home/iciq-lq/LVASPTHW/ex04$
   iciq-lq@ln3:/THFS/home/iciq-lq/LVASPTHW/ex04$ 
   ```
 
-* 后面的命令中，我们得到了这样的错误：sed: can't read 1/KPOINTS: No such file or directory。原因是我们的问价夹中有3个数字，我们需要调用$i三次，但值写了\$i/KPOINTS，导致sed的命令对象不正确。
+* 后面的命令中，我们得到了这样的错误：sed: can't read 1/KPOINTS: No such file or directory。原因是我们的问价夹中有3个数字，我们需要调用$i三次，但写\$i/KPOINTS就会引用一次，导致sed的命令对象不正确。
 * 改正之后，我们发现INCAR中的1 1 1 全部被替换成\$i \$i \$i了。这里是大师兄故意犯了的错误：将双引号变成了单引号。到现在，单引号和双引号的区别，相信大家在练习完之后能大体知道个所以然了。
 
 
