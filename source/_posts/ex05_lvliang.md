@@ -3,8 +3,9 @@ title: Ex05 VASP任务的提交
 categories: 
 - LVASPTHW
 tags: 
-- for 循环
-- 批量处理
+- 吕梁
+- 超算中心
+- 天河二号
 date: 2018-10-26 15:30:16
 ---
 
