@@ -1,5 +1,9 @@
 ---
 title: Ex1 VASP基本输入文件的准备（INCAR）
+categories: 
+- LVASPTHW
+tags: 
+- INCAR
 date: 2018-10-15 15:30:16
 ---
 

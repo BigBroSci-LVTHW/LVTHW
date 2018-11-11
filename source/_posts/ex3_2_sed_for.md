@@ -1,5 +1,11 @@
 ---
 title: Ex03 做计算常用的批量处理方法（四）
+categories: 
+- LVASPTHW
+tags: 
+- for 循环
+- 批量处理
+- sed
 date: 2018-10-23 15:30:16
 ---
 

@@ -1,5 +1,10 @@
 ---
 title: Ex04 做计算常用的批量处理方法（五）
+categories: 
+- LVASPTHW
+tags: 
+- for 循环
+- 批量处理
 date: 2018-10-24 15:30:16
 ---
 
