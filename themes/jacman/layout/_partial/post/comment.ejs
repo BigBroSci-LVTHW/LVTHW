@@ -1,6 +1,6 @@
 <% if (theme.duoshuo_shortname && page.comments){ %>
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>
+  <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>
 </section>
 <% } %>
 <% if( (config.disqus_shortname || theme.disqus_shortname) && page.comments) { %>
@@ -16,3 +16,6 @@
 <% if (theme.changyan_appid && page.comments){ %>
 <div id="SOHUCS" style="width: 95%;"></div>
 <% } %>
+
+<div id="disqus_thread"></div>
+<script>
