@@ -1,5 +1,9 @@
 ---
 title: Ex1 VASP基本输入文件的准备（小结）
+categories: 
+- LVASPTHW
+tags: 
+- VASP 输入文件
 date: 2018-10-19 15:30:16
 ---
 

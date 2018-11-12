@@ -1,5 +1,9 @@
 ---
 title: Ex1 VASP基本输入文件的准备（KPOINTS）
+categories: 
+- LVASPTHW
+tags: 
+- KPOINTS
 date: 2018-10-16 15:30:16
 ---
 

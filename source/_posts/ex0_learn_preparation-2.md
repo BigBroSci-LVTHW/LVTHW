@@ -1,5 +1,9 @@
 ---
 title: Ex0 学习前的准备工作（二）
+categories: 
+- LVASPTHW
+tags: 
+- 准备工作
 date: 2018-10-12 15:30:16
 ---
 

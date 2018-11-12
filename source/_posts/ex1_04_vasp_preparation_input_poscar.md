@@ -1,5 +1,9 @@
 ---
 title: Ex1 VASP基本输入文件的准备（POSCAR）
+categories: 
+- LVASPTHW
+tags: 
+- POSCAR
 date: 2018-10-17 15:30:16
 ---
 
