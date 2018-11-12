@@ -1,14 +1,9 @@
 ---
 title: Learn VASP The Hard Way (序言)
-<<<<<<< HEAD
-tags:
-  vasp
-=======
 categories: 
 - LVASPTHW
 tags: 
 - 序言
->>>>>>> 730e7faeb04d2a73018c934787df592366242b7c
 date: 2018-10-10 15:30:16
 ---
 
