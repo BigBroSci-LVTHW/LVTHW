@@ -70,6 +70,13 @@ time_format: HH:mm:ss
 per_page: 50
 pagination_dir: page
 
+# math:
+  # engine: 'mathjax' # or 'katex'
+  # mathjax:
+    # src: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+    # config:
+      # # MathJax config
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
