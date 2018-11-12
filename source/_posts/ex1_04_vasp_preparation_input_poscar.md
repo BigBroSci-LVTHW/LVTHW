@@ -4,10 +4,11 @@ categories:
 - LVASPTHW
 tags: 
 - POSCAR
+mathjax: true
 date: 2018-10-17 15:30:16
 ---
 
-
+$\require{mediawiki-texvc}$
 
 这一节，我们学习VASP计算中模型的文件：***POSCAR***
 
