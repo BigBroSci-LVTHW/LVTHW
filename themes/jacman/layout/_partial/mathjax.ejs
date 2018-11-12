@@ -26,6 +26,19 @@
     });
 </script>
 
-<script type="text/javascript" src="/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "STIX",
+        webFont : "STIX-Web",
+        imageFont : null
+    }
+});
 </script>
+
+<script src='https://cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>
+/* <script type="text/javascript" */
+  /* src="/js/mathjax/MathJax.js?config=TeX-AMS-MML_SVG"> */
+/* </script> */
 <% } %>
