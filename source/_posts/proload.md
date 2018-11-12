@@ -1,5 +1,7 @@
 ---
 title: Learn VASP The Hard Way (序言)
+tags:
+  vasp
 date: 2018-10-10 15:30:16
 ---
 

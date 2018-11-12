@@ -16,8 +16,8 @@ menu:
 widgets: 
 - category
 - tag
-- links
-- rss
+# - links
+# - rss
   ## provide eight widgets:github-card,category,tag,rss,archive,tagcloud,links,weibo
 
 
