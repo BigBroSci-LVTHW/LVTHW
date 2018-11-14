@@ -6,6 +6,7 @@ tags:
 - for 循环
 - 批量处理
 date: 2018-10-25 15:30:16
+mathjax: true
 ---
 
 $\require{mediawiki-texvc}$
@@ -21,7 +22,7 @@ $\require{mediawiki-texvc}$
 
 ### POSCAR 批处理练习:
 
-前面我们将O原子放到了一个8$\times$ 8$\times$8$\AA{^3}$ 的格子里。现在我们要创建不同大小的正方形格子，每个格子边长分别为8,10,12,14,16$\AA$。重复下面的操作，完成POSCAR的批量练习，并思考这些命令是怎么工作的。
+前面我们将O原子放到了一个8$\times$ 8$\times$8 $\AA{^3}$ 的格子里。现在我们要创建不同大小的正方形格子，每个格子边长分别为8,10,12,14,16$\AA$。重复下面的操作，完成POSCAR的批量练习，并思考这些命令是怎么工作的。
 
 ```
 iciq-lq@ln3:/THFS/home/iciq-lq/LVASPTHW/ex04$ mkdir poscar
