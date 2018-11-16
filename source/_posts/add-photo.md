@@ -9,7 +9,7 @@ category: test
 
 1. 在hexo根目录执行 `hexo new 'article-name'` ;
 2. `cd source/_posts` 就可以看到生成了 `article-name.md` 和 `article-name` 文件夹
-3. 将资源文件放入 'article-name' 文件夹内,然后在 md 文件中使用相对路径引用即可,如
+3. 将资源文件放入 `article-name` 文件夹内,然后在 md 文件中使用相对路径引用即可,如
 `![](add-photo/test.jpg)`
 
 ![](add-photo/test.jpg)
