@@ -1,6 +1,6 @@
 ---
 title: LaTeX 支持测试页面
-date: 2018-11-12 10:38:56
+date: 2018-09-12 10:38:56
 tags: LaTeX
 categories: test
 mathjax: true
