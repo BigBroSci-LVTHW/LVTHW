@@ -1,5 +1,5 @@
 ---
-title：Ex06 VASP的输出文件（二）
+title: Ex06 VASP的输出文件（二）
 categories: 
 - LVASPTHW
 tags: 
