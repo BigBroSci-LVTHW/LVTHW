@@ -90,3 +90,10 @@ deploy:
   type: git
   repo: https://github.com/bigbrosci/bigbrosci.github.io.git
   branch: master
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: OWE4jcfK8IWkx4zaWuOloxKU-gzGzoHsz
+  app_key: MRBwViAFCsPSOnnRF9LW7bdo  
