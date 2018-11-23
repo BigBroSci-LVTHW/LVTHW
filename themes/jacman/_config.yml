@@ -92,6 +92,10 @@ disqus_shortname: bigbrosci-com      ## e.g. wuchong   your disqus short name.
 # changyan_appid:       ## changyan app id, see http://changyan.kuaizhan.com/
 # changyan_appkey:      ## changyan app key, see http://changyan.kuaizhan.com/
 
+leancloud_visitors:
+  enable: true
+  app_id: OWE4jcfK8IWkx4zaWuOloxKU-gzGzoHsz
+  app_key: MRBwViAFCsPSOnnRF9LW7bdo  
 
 #### Share button
 jiathis:
