@@ -70,19 +70,21 @@ time_format: HH:mm:ss
 per_page: 50
 pagination_dir: page
 
-# math:
-  # engine: 'mathjax' # or 'katex'
-  # mathjax:
-    # src: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    src: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
     # config:
       # # MathJax config
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jacman
-stylus:
-  compress: true
+#theme: jacman
+#stylus:
+#  compress: true
+
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -97,3 +99,14 @@ leancloud_visitors:
   enable: true
   app_id: OWE4jcfK8IWkx4zaWuOloxKU-gzGzoHsz
   app_key: MRBwViAFCsPSOnnRF9LW7bdo  
+
+# https://zhuanlan.zhihu.com/p/33857596
+# nodes_modules/marked/lib/marked.js
+# escape: /^\\([\\`*{}\[\]()# +\-.!_>])/,
+# 改为:
+# escape: /^\\([`*{}\[\]()# +\-.!_>])/,
+#
+# 找到em的符号:
+# em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+# 改为:
+# em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
