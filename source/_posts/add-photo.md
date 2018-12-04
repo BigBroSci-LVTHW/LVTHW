@@ -13,3 +13,16 @@ category: test
 `![](add-photo/test.jpg)`
 
 ![](add-photo/test.jpg)
+
+# 如何插入复杂表格
+
+只需要使用[这个网站](http://www.tablesgenerator.com/html_tables)绘制出自己想要的
+表格样式，注意去掉生成 CSS 的选项和选择兼容模式（让代码显示在一行）,如图所示
+
+![](add-photo/table.png)
+
+![](add-photo/table2.png)
+
+然后就大功告成
+
+<table><tr><th></th><th>a</th><th>b</th><th>c</th><th>d</th><th>e</th></tr><tr><td rowspan="2">merge</td><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td></tr><tr><td>2</td><td>4</td><td>6</td><td>8</td><td>0</td></tr><tr><td rowspan="2">merge</td><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td></tr><tr><td>2</td><td>4</td><td>6</td><td>8</td><td>0</td></tr></table>
