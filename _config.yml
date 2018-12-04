@@ -100,6 +100,12 @@ leancloud_visitors:
   app_id: OWE4jcfK8IWkx4zaWuOloxKU-gzGzoHsz
   app_key: MRBwViAFCsPSOnnRF9LW7bdo  
 
+search:
+  path: search.xml
+  format: html
+  field: post
+  limit: 10000
+
 # https://zhuanlan.zhihu.com/p/33857596
 # nodes_modules/marked/lib/marked.js
 # escape: /^\\([\\`*{}\[\]()# +\-.!_>])/,
