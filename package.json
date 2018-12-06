@@ -16,6 +16,7 @@
     "hexo-generator-search": "^2.3.0",
     "hexo-generator-searchdb": "^1.0.8",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-helper-live2d": "^3.1.0",
     "hexo-inject": "^1.0.0",
     "hexo-math": "^3.0.4",
     "hexo-renderer-ejs": "^0.3.1",
