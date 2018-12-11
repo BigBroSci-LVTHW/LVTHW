@@ -133,3 +133,7 @@ live2d:
     height: 300
   mobile:
     show: true
+
+admin:
+  username: bigbrosci
+  password: bigbrosci

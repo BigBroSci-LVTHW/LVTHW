@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "hexo": "^3.8.0",
+    "hexo-admin": "^2.3.0",
     "hexo-asset-image": "0.0.3",
     "hexo-blog-encrypt": "^2.0.10",
     "hexo-deployer-git": "^0.3.1",
