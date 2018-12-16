@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<!-- Copyright (c) 2010-2014 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+	errorSettings: {message: undefined},
+    TeX: { extensions: ["[Contrib]/siunitx/unpacked/siunitx.js"] }
+  });
+  MathJax.Ajax.config.path['Contrib']  = '..';
+</script>
+<!--<script type="text/javascript" src="../../MathJax/unpacked/MathJax.js?config=TeX-AMS_HTML"></script>-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/unpacked/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+<style type="text/css">
+table.unit-listing pre {
+    margin: 0;
+}
+table.unit-listing img.tex-example {
+    zoom:1.4;
+}
+
+</style>
+    
+</head>
+<body>
+
+<h2>Normative references for this implementation</h2>    
+
+<ul>
+<li><a href="http://www.ctan.org/pkg/siunitx">siunitx LaTeX package</a></li>
+<li><a href="http://www.w3.org/TR/mathml-units/">W3C note on Units in MathML</a></li>    
+</ul>
+
+<h2>Examples</h2>    
+
+Trigger MathJax loading $!$.    
+    
+<script type="text/x-siunitx" id="generic-examples-src">
+    3 siunitx for the impatient
+\num{12345,67890}
+\num{1+-2i}
+\num{.3e45}
+\num{1.654 x 2.34 x 3.430}
+
+\si{kg.m.s^{-1}}
+\si{\kilogram\metre\per\second}
+\si[per-mode=symbol]{\kilogram\metre\per\second}
+\si[per-mode=symbol]{\kilogram\metre\per\ampere\per\second}
+
+\numlist{10;20;30}
+\SIlist{0.13;0.67;0.80}{\milli\metre}
+\numrange{10}{20}
+\SIrange{0.13}{0.67}{\milli\metre}
+    4.2 Numbers
+\num{123}
+\num{1234}
+\num{12345}
+\num{0.123}
+\num{0,1234}
+\num{.12345}
+\num{3.45d-4}
+\num{-e10}
+
+\numlist{10;30;50;70}
+
+\numrange{10}{30}
+
+\ang{10}
+\ang{12.3}
+\ang{4,5}
+\ang{1;2;3}
+\ang{;;1}
+\ang{+10;;}
+\ang{-0;1;}
+    4.3 Units
+\si{kg.m/s^2}
+\si{g_{polymer}~mol_{cat}.s^{-1}}
+    
+\si{\kilo\gram\metre\per\square\second}
+\si{\gram\per\cubic\centi\metre}
+\si{\square\volt\cubic\lumen\per\farad}
+\si{\metre\squared\per\gray\cubic\lux}
+\si{\henry\second}
+
+\SI[mode=text]{1.23}{J.mol^{-1}.K^{-1}}
+\SI{.23e7}{\candela}
+\SI[per-mode=symbol]{1.99}[\$]{\per\kilogram}   
+\SI[per-mode=fraction]{1,345}{\coulomb\per\mole}
+
+\SIlist{10;30;45}{\metre}    
+\SIrange{10}{30}{\metre}    
+    4.4 The unit macros
+\si{\square\becquerel}
+\si{\joule\squared\per\lumen}   
+\si{\cubic\lux\volt\tesla\cubed} 
+
+\si{\henry\tothe{5}}
+\si{\raiseto{4.5}\radian}
+
+\si{\joule\per\mole\per\kelvin}    
+\si{\joule\per\mole\kelvin}    
+\si{\per\henry\tothe{5}}    
+\si{\per\square\becquerel}
+
+\si{\kilogram\of{metal}}
+\SI[qualifier-mode = brackets]{0.1}{\milli\mole\of{cat}\per\kilogram\of{prod}}
+
+\si[per-mode = fraction]{\cancel\kilogram\metre\per\cancel\kilogram\per\second}
+\si{\highlight{red}\kilogram\metre\per\second}
+\si[unit-color = purple]{\highlight{red}\kilogram\metre\per\second}
+
+\si{\kilo}
+\si{\micro}
+\si[prefixes-as-symbols = false]{\kilo}
+
+\si{\kilo\gram\micro}\text{<< this shoulg raise an error}
+\SI{10}{\micro}\text{<< this shoulg raise an error}
+</script>
+<table class="unit-listing" id="generic-examples">
+<thead><tr><th>Code</th><th>MathJax</th></tr></thead>
+</table>    
+    
+<h2>siunitx Reference</h2>
+
+<h3>Unit macros known to siunitx</h3>
+
+<h4>SI base units</h4>
+<table class="unit-listing" id="reference-SI"></table>    
+<h4>SI coherent derived units</h4>
+<table class="unit-listing" id="reference-coherent"></table>    
+<h4>Non-SI units acceptable for use within SI system</h4>
+<table class="unit-listing" id="reference-accepted"></table>    
+<h4>Non-SI units whose value must be determined from experiment</h4>
+<table class="unit-listing" id="reference-experimental"></table>    
+<h4>Other non-SI units</h4>
+<table class="unit-listing" id="reference-other"></table>    
+
+<h2>Test-cases</h2>    
+<table class="unit-listing" data-tex-src="test/testcases.tex"></table>
+    
+</body>
+<script type="text/javascript">
+function SortedUnitsReference(parent,cat){
+  // make header
+  parent.innerHTML = "<thead><tr><th>Code</th><th>MathJax</th></tr></thead>";
+
+  var SIUnits = MathJax.Extension['TeX/siunitx'].SIUnits;
+  var selected = [];
+  for(var unit in SIUnits){
+    unit = SIUnits[unit];
+    if(unit.category != cat)
+      continue;
+    selected.push(unit.name);
+  }
+  selected.sort();
+  selected.forEach(function(unitname){
+    var unit = SIUnits[unitname];
+    var row = document.createElement('tr');
+    var code = "$\\si{\\"+unit.name+"}$";
+    row.innerHTML = "<td><pre>"+code+"</pre></td><td>"+code+"</td>";
+    parent.appendChild(row);
+  });
+};
+function MyHash(s){
+  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+}
+    
+MathJax.Hub.Register.StartupHook("TeX siunitx Ready",function(){
+  SortedUnitsReference(
+    document.getElementById('reference-SI'),
+    'SI base'
+  );
+  SortedUnitsReference(
+    document.getElementById('reference-coherent'),
+    'coherent derived'
+  );
+  SortedUnitsReference(
+    document.getElementById('reference-accepted'),
+    'accepted non-SI'
+  );
+  SortedUnitsReference(
+    document.getElementById('reference-experimental'),
+    'experimental non-SI'
+  );
+  SortedUnitsReference(
+    document.getElementById('reference-other'),
+    'other non-SI'
+  );
+    
+  var parent = document.getElementById('generic-examples');
+  var src = document.getElementById('generic-examples-src').innerHTML;
+  src.split("\n").forEach(function(line){
+    line = line.trim();
+    var row = document.createElement('tr');
+    if(!line){
+      row.innerHTML = '<th colspan="2" style="border-bottom: solid;"></th>';
+      parent.appendChild(row);
+      return;
+    }
+    if(line[0] != '\\'){
+      row.innerHTML = '<th colspan="2" style="border-bottom: solid;">'+line+'</th>';
+      parent.appendChild(row);
+      return;
+    }
+    var code = "$"+line+"$";
+    row.innerHTML = "<td><pre>"+code+"</pre></td><td>"+code+"</td>";
+    parent.appendChild(row);
+  });
+    
+  var testcases = document.querySelectorAll('.unit-listing[data-tex-src]');
+  for(var k=0;k<testcases.length;++k){
+    var testcase = testcases[k];
+  // make header
+  testcase.innerHTML = "<thead><tr><th>Code</th><th>MathJax</th><th>LaTeX</th></tr></thead>";
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 ) {
+           if(xmlhttp.status != 200)
+              console.log('ERROR: ',xmlhttp.status);
+           var src = xmlhttp.responseText;
+           src.split('\n').forEach(function(line){
+                line = line.trim();
+                if(!line)
+                    return;
+                var row = document.createElement('tr');
+                var code = "$"+line+"$";
+                var hash = MyHash(line);
+                var hashstr = '';
+                for(var kk=0;kk<4;++kk){
+                    hashstr = ('00'+(hash&0xff).toString(16)).slice(-2) + hashstr;
+                    hash >>= 8;
+                }
+                var refimg = 'test/latex-output/'+hashstr+'.svg';
+                row.innerHTML = "<td><pre>"+code+"</pre></td><td>"+code+"</td>"+'<td><img class="tex-example" src="'+refimg+'"/></td>';
+                testcase.appendChild(row);
+           });
+        }
+    }
+    xmlhttp.open("GET", testcase.getAttribute('data-tex-src'), true);
+    xmlhttp.send(); 
+  }
+    
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+});
+</script>
+</html>

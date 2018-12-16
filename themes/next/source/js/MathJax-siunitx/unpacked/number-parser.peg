@@ -1,0 +1,134 @@
+{
+// These are mainly here to experiment with the parser in peg's online playground
+var default_options = {
+    'input-complex-roots': 'ij',
+    'input-decimal-markers': '.,',
+    'input-exponent-markers': 'eEdD',
+};
+
+// var options = default_options;
+
+
+
+function repeat(pattern, count) {
+    if (count < 1) return '';
+    var result = '';
+    while (count > 1) {
+        if (count & 1) result += pattern;
+        count >>= 1, pattern += pattern;
+    }
+    return result + pattern;
+}
+
+}
+
+start = _ prod:Product _ {return prod;}
+
+
+ComplexRoot "complex root" = s:Symbol &{return options['input-complex-roots'].indexOf(s)>=0;} {return s;}
+DecimalMarker "decimal marker" = s:Symbol &{return options['input-decimal-markers'].indexOf(s)>=0;} {return s;}
+ExponentMarker "exponent marker" = s:Symbol &{return options['input-exponent-markers'].indexOf(s)>=0;} {return s;}
+
+Symbol = .
+
+Product = head:MaybeQuotient tail:(_ Factor)* {
+	var ret=[head];
+    tail.forEach(function(f){ret.push(f[1]);});
+    return ret;
+}
+Factor = 'x' _ num:MaybeQuotient {return num;}
+MaybeQuotient = num:FullNum denom:(_ '/' _ FullNum)? {
+	return {num:num, denom:denom && denom[3]};
+}
+FullNum = OnlyExponent / FullNumWMantissa
+FullNumWMantissa = rel:(Rel _)? mantissa:ComplexOrRealWUncert exp:(_ Exponent)? {
+	mantissa.exp = exp && exp[1];
+    mantissa.rel = rel && rel[0];
+	return mantissa;
+}
+OnlyExponent = rel:(Rel _)? sign:(DblSign _)? exp:Exponent {
+    var ret = {
+        sign: sign && sign[0],
+        exp: exp,
+        rel: rel && rel[0]
+    };
+    return ret;
+}
+ComplexOrRealWUncert = ComplexNum /  RealWUncertPM / RealWUncertBracket
+ComplexNum = re:((DblSign _)? DecimalWUncert) im:(_ DblSign _ ImaginaryNum) {
+	var res = re[0] && re[0][0];
+    re = re[1];
+    re.sign = res;
+    var ims = im && im[1];
+    im = im && im[3];
+    if(im) im.sign = ims;
+	return {
+    	re: re,
+        im: im,
+    }
+}
+RealWUncertBracket = sign:(DblSign _)? num:DecimalWUncert {
+    num.sign = sign && sign[0];
+    return {re:num};
+}
+RealWUncertPM = sign:(DblSign _)? num:Decimal _ PM _ uncert:Decimal {
+	var n = num.frac.length;
+    var m = uncert.frac.length;
+    num.frac = num.frac + repeat('0',Math.max(0,m-n));
+    uncert.frac = uncert.frac + repeat('0',Math.max(0,n-m));
+    num.uncert = uncert.int + uncert.frac;
+    num.sign = sign && sign[0];
+	return {re:num};
+}
+
+ImaginaryNum = ImaginaryNumPost / ImaginaryNumPre
+ImaginaryNumPost = num:DecimalWUncert _ root:ComplexRoot {
+	num.root = root; return num;
+}
+ImaginaryNumPre = root:ComplexRoot _ num:DecimalWUncert {
+	num.root = root; return num;
+}
+
+
+Exponent = ExponentMarker _ sign:(Sign _)? exponent:Decimal {
+	exponent.sign = sign && sign[0];
+    return exponent;
+}
+
+Sign = [+-] { return text(); }
+PM = ('+-' / '\\pm') {return '\\pm';}
+MP = ('-+' / '\\mp') {return '\\mp';}
+DblSign = PM / MP / Sign
+
+LL = ('<<' / '\\ll') {return '\\ll';}
+LT = '<' {return '<';}
+LE = ('<=' / '\\le' 'q'?) {return '\\le';}
+GG = ('>>' / '\\gg') {return '\\gg';}
+GT = '>' {return '>';}
+GE = ('>=' / '\\ge' 'q'?) {return '\\ge';}
+Rel = LL / LE / LT / GG / GE / GT
+
+DecimalWUncert = num:Decimal uncert:(_ '(' _ Digits _ ')')? {
+	uncert = uncert && uncert[3];
+    num.uncert = uncert;
+    return num;
+}
+Decimal "decimal" = DecimalWInt / DecimalNoInt
+DecimalWInt = int:Digits rest:(_ DecimalMarker (_ Digits)?)? {
+	var sep = rest && rest[1];
+    var frac = rest && rest[2] && rest[2][1];
+    return {int: int, sep:sep, frac:frac || ''};
+}
+DecimalNoInt = sep:DecimalMarker _ frac:Digits {
+	return {int: '', sep:sep, frac:frac};
+}
+
+Integer "integer"
+  = Digits { return parseInt(text(), 10); }
+
+// TODO: siunitx interprets any symbol found in input-symbols
+// as if they were digits.
+Digits = [0-9]+ {return text();}
+
+_ "whitespace"
+  = [ \t\n\r]*            // TODO: retain-unity-mantissa retain-zero-exponent

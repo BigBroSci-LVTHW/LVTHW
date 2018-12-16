@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive MathJax test</title>
+<!-- Copyright (c) 2010-2014 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+//  	errorSettings: {message: undefined},
+    TeX: { extensions: [
+      "[siunitx]/siunitx.js",
+      "color.js"
+    ] }
+  });
+  MathJax.Ajax.config.path['siunitx']  = '..';
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+    <script type="text/javascript" src="select-siunitx-version.js"></script>
+<script type="text/javascript">
+function ch(el){
+    var name = el.getAttribute('data-target');
+    process(name);
+}
+function vid(id){
+    return document.getElementById(id).value;
+}
+var srcfun = {
+  raw: function(){return vid('in-raw');},
+    ang: function(){return '\\ang['+vid('in-ang-opt')+']{'+vid('in-ang')+'}';},
+    si: function(){return '\\si['+vid('in-si-opt')+']{'+vid('in-si')+'}';},
+    SI2: function(){return '\\SI['+vid('in-SI2-opt')+']{'+vid('in-SI2-num')+'}{'+vid('in-SI2-unit')+'}';}
+};
+function process(name){
+    var src=srcfun[name]();
+    src = '$' + src + '$';
+    console.log('process ',name,src);
+    document.getElementById("pre-"+name).innerHTML = src;
+    document.getElementById("out-"+name).innerHTML = src;
+    xml_http_post("compile-latex", src, newSVG, name);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"out-"+name]);
+}
+function newSVG(req, name) {
+    var type = req.getResponseHeader('Content-Type');
+    if (type!= 'image/svg+xml'){
+        console.log('Ignoring answer with Content-Type '+type);
+        return;
+    }
+    var elem = document.getElementById('ref-'+name);
+    elem.innerHTML = req.responseText;
+}
+function xml_http_post(url, data, callback, id) {
+    var req = false;
+    try {
+        // Firefox, Opera 8.0+, Safari
+        req = new XMLHttpRequest();
+    }
+    catch (e) {
+        // Internet Explorer
+        try {
+            req = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch (e) {
+            try {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch (e) {
+                alert("Your browser does not support AJAX!");
+                return false;
+            }
+        }
+    }
+    req.open("POST", url, true);
+    req.onreadystatechange = function() {
+        if (req.readyState == 4) {
+            callback(req, id);
+        }
+    }
+    req.send(data);
+}
+</script>
+<style type="text/css">
+</style>
+    
+</head>
+<body>
+
+<h2>Test MathJax here:</h2>
+
+<table class="unit-listing" id="unittest">
+    <thead><tr><th>Input</th><th>MathJax</th><th>Code</th><th>Reference</th></tr></thead>
+    <tbody>
+    <tr>
+        <td>$<input type="text" id="in-raw" data-target="raw" value="a^2" onchange="ch(this)"/>$</td>
+        <td><div id="out-raw">$a^2$</div></td>
+        <td><pre id="pre-raw">$a^2$</pre></td>
+        <td><div id="ref-raw"></div></td>
+    </tr>
+    <tr>
+        <td>$\si[<input type="text" id="in-si-opt" data-target="si" value="" onchange="ch(this)"/>]
+            {<input type="text" id="in-si" data-target="si" value="\mm" onchange="ch(this)"/>}$</td>
+        <td><div id="out-si">$\si{\mm}$</div></td>
+        <td><pre id="pre-si">$\si{\mm}$</pre></td>
+        <td><div id="ref-si"></div></td>
+    </tr>
+    <tr>
+        <td>$\ang[<input type="text" id="in-ang-opt" data-target="ang" value="" onchange="ch(this)"/>]
+            {<input type="text" id="in-ang" data-target="ang" value="" onchange="ch(this)"/>}$</td>
+        <td><div id="out-ang"></div></td>
+        <td><pre id="pre-ang"></pre></td>
+        <td><div id="ref-ang"></div></td>
+    </tr>
+    <tr>
+        <td>
+            $\SI[<input type="text" id="in-SI2-opt" data-target="SI2" value="" onchange="ch(this)"/>]
+            {<input type="text" id="in-SI2-num" data-target="SI2" value="1" onchange="ch(this)"/>}
+            {<input type="text" id="in-SI2-unit" data-target="SI2" value="\mm" onchange="ch(this)"/>}$</td>
+        <td><div id="out-SI2">$\SI{1}{\mm}$</div></td>
+        <td><pre id="pre-SI2">$\SI{1}{\mm}$</pre></td>
+        <td><div id="ref-SI2"></div></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
