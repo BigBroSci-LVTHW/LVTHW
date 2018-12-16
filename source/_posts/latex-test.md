@@ -22,3 +22,13 @@ i\hbar\frac{\partial \psi}{\partial t} =
   \frac{-\hbar^2}{2m} \left(  \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} +
   \frac{\partial^2}{\partial z^2} \right) \psi + V \psi.
 $$
+
+# 使用 `siunitx` 包中的命令
+
+$\num{1+-2i}$
+
+$\si{kg.m.s^{-1}}$
+
+$\si[per-mode=symbol]{\kilogram\metre\per\ampere\per\second}$
+
+$\si[per-mode = fraction]{\cancel\kilogram\metre\per\cancel\kilogram\per\second}$
