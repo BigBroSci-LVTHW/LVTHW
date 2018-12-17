@@ -32,3 +32,17 @@ $\si{kg.m.s^{-1}}$
 $\si[per-mode=symbol]{\kilogram\metre\per\ampere\per\second}$
 
 $\si[per-mode = fraction]{\cancel\kilogram\metre\per\cancel\kilogram\per\second}$
+
+## collapsible markdown?
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
