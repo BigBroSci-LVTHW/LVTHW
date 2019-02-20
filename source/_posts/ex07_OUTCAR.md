@@ -422,7 +422,7 @@ alpha Z and the Ewald energy define the electrostatic  interaction of the ions i
 
 ```
 
-上面的能能量有好几个，很多人不知道该用哪一个。前面我们讲解`OSZICAR`的时候提高了使用E0后面的那个数值。`OUTCAR`中与`E0`对应的是`energy(sigma->0) =` 后面的那个。所以，在今后的学习中，我们不要再提问使用哪个能量的问题了。提取能量的命令：
+上面的能能量有好几个，很多人不知道该用哪一个。前面我们讲解`OSZICAR`的时候，告诉大家要使用E0后面的那个数值，那么在`OUTCAR`中与`E0`对应（相同）的是`energy(sigma->0) =` 后面的那个。所以，在今后的学习中，我们不要再提问使用OUTCAR中的哪个能量的问题了。提取能量的命令：
 
 ```
 grep  without OUTCAR | tail -n 1
