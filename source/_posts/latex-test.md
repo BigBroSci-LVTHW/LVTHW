@@ -23,6 +23,10 @@ i\hbar\frac{\partial \psi}{\partial t} =
   \frac{\partial^2}{\partial z^2} \right) \psi + V \psi.
 $$
 
+# 支持某些特殊命令
+
+添加 mediawiki 的包在文档开头： `$\require{mediawiki-texvc}$`
+
 # 使用 `siunitx` 包中的命令
 
 $\num{1+-2i}$
