@@ -37,11 +37,11 @@ export PATH=$PATH:/THFS/opt/python3.6/bin
 
 如果你想在自己电脑上安装ASE。安装过程很简单，详细的信息请参考：https://wiki.fysik.dtu.dk/ase/install.html。Mac太贵，没尝试过，Windows系统本人不太熟悉，下面附上在Windows10中Ubuntu寄生系统的安装过程（跟正儿八经Ubuntu系统的安装流程一样）； 总共就三步。
 
-* 安装pip：如果已经安装了pip，则就剩2步了。![](C:\Users\lqlhz\OneDrive\桌面\1.png)
+* 安装pip：如果已经安装了pip，则就剩2步了。![](A13\a13-1.png)
 
 * 安装ASE：
 
-  ![](C:\Users\lqlhz\OneDrive\桌面\2.png)
+  ![](A13\a13-2.png)
 
 * 添加ASE的路径到`.bashrc`文件。
 
