@@ -5,7 +5,7 @@ categories:
 tags: 
 - 数据库
 - 网站
-date: 2019-06-01 15:30:16
+date: 2019-09-28 15:30:16
 ---
 
 
@@ -74,13 +74,15 @@ https://www.ctcms.nist.gov/wulffman/
 
 https://xpssimplified.com/
 
+**Cn Fullerenes**
+
+http://www.nanotube.msu.edu/fullerene/fullerene-isomers.html
+
 #### 热力学数据
 
-##### https://physics.nist.gov/cuu/Constants/index.html  NIST 数据库
+NIST 数据库： https://physics.nist.gov/cuu/Constants/index.html  
 
-##### http://hbcponline.com/faces/contents/ContentsSearch.xhtml  
-
-http://hbcponline.com/faces/contents/ContentsSearch.xhtml CRC Handbook of physical chemistry 查找热力学参数，晶格常数，entropy等等。
+CRC Handbook of physical chemistry ： http://hbcponline.com/faces/contents/ContentsSearch.xhtml 查找热力学参数，晶格常数，entropy等等。
 
 http://www2.ucdsb.on.ca/tiss/stretton/database/inorganic_thermo.htm 无机化合物的物理和热力学相关数据
 
@@ -106,17 +108,17 @@ http://halas.rice.edu/conversions
 
 #### 书籍文献下载：
 
-##### google和google scholar：科学上网。
+google和google scholar：科学上网。
 
-##### http://gen.lib.rus.ec/ 下载书籍
+http://gen.lib.rus.ec/ 下载书籍
 
 资源丰富，但不要贪多，更不要下一堆放到自己电脑里占地方。找几本好书，认真静下心来好好学习。
 
-##### http://www.expaper.cn/ 科研速递论坛， 求助文献，书籍，成功率极高。
+http://www.expaper.cn/ 科研速递论坛， 求助文献，书籍，成功率极高。
 
-##### sci-hub 系列，现在网上各种域名，插件，桌面版的都有，我就不瞎凑热闹了。
+sci-hub 系列，现在网上各种域名，插件，桌面版的都有，我就不瞎凑热闹了。
 
-##### 5000人QQ群:  157099073  汇聚大家的力量，解决每一篇小文献的困难。
+5000人QQ群:  157099073  汇聚大家的力量，解决每一篇小文献的困难。
 
 书籍和文献下载的原则，宁缺毋滥，认真阅读每一篇下载的文献，对自己的时间负责。别图多。
 
@@ -124,63 +126,53 @@ http://halas.rice.edu/conversions
 
 #### VASP 相关
 
-##### VASP官网
+**VASP官网**
 
 http://www.vasp.at/, VASP最权威，最专业的学习资料都在这里面了。英文刚开始看起来有点不适应，坚持下去，慢慢就好了。不建议看除官网以外的那些乱七八糟的说明（包括我自己写的教程）
 
-##### VASP 教程视频
+**VASP 教程视频**
 
 http://www.nersc.gov/users/training/events/3-day-vasp-workshop/, A 3-day VASP Workshop at NERSC: VASP 开发者（长发大胡子那哥们）做的workshop, youtube 有视频。链接：https://www.youtube.com/playlist?list=PL20S5EeApOSumWZkzsaYxAvozjvFZ3ks4 
 
-##### VASP官方论坛
+**VASP官方论坛**
 
 https://cms.mpi.univie.ac.at/vasp-forum/
 
 VASP官方论坛，需要注册才可以提问，但一般来说你的问题已经有人提问过了，直接复制到google里面，基本都会显示该论坛的链接。可以不保存。
 
-#####  Henkelman 课题组
+**Henkelman 课题组**
 
 http://theory.cm.utexas.edu/henkelman/, 大量VASP相关的脚本，VTST计算过渡态，bader电荷分析，CHGCAR处理脚本等，向Henkelman致以崇高的敬意。
 
-#####  ASE： 
+**ASE**： Atomic Simulation Environment： https://wiki.fysik.dtu.dk/ase/， 适合催化计算相关
 
-Atomic Simulation Environment： https://wiki.fysik.dtu.dk/ase/， 适合催化计算相关
+**Pymatgen**： http://pymatgen.org/, 适合材料计算的
 
-##### Pymatgen
+**K-path**： https://www.materialscloud.org/work/tools/seekpath 
 
-http://pymatgen.org/, 适合材料计算的
+能带Kpath选择的网站，上传自己的结构，便可以得到建议的路径。
 
+**Chemml**: https://hachmannlab.github.io/chemml/
 
+**p4vasp**：http://www.p4vasp.at/
 
-##### K-path
+**RDkit**：https://www.rdkit.org/  
 
-能带Kpath选择的网站，上传自己的结构，便可以得到建议的路径。https://www.materialscloud.org/work/tools/seekpath 
+**VASPkit** ： https://sourceforge.net/projects/vaspkit/files/ 来自中国的良心软件, VASP计算前后处理，功能强大，使用简单，老少皆宜。
 
+**VESTA ** ： http://jp-minerals.org/vesta/en/ 来自日本的良心软件
 
+**Xcrysden**  ：http://www.xcrysden.org/， 用于批量做图，选择K-path做能带图，等。
 
-#### 求职相关
+**Openbabel** ：http://openbabel.org/wiki/Main_Page  强大的格式转换工具，它说第二，没人敢说第一。
 
-##### Psik Network 
-
-http://psi-k.net/， 注册后，一旦有人在网络里面发送海外职位信息，你便会收到邮件提醒。
-
- ##### Linkedin 领英：
-
-https://www.linkedin.com/，有些老板也会在这上面发布招聘信息，本人当年的博士位置，就是在这里面发现的。 
-
-##### Research gate 
-
-https://www.researchgate.net/, 可以用来下文献，关注同行最新进展。
+**RDkit**：化学信息学重要的开源包。
 
 
 
 #### 程序软件相关：
 
-##### Bash
-
-http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
-
-##### Python
+##### Bash ：http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 
 https://learnpythonthehardway.org/
 
@@ -194,51 +186,45 @@ https://stackoverflow.com/  一般谷歌搜索遇到出现的程序问题，都�
 
 https://www.geeksforgeeks.org
 
-##### VASPkit
+ https://stackoverflow.com/  一般谷歌搜索遇到出现的程序问题，都可以在这里找到答案。
 
-https://sourceforge.net/projects/vaspkit/files/ 来自中国的良心软件, VASP计算前后处理，功能强大，使用简单，老少皆宜。
 
-##### VESTA 官网
 
-http://jp-minerals.org/vesta/en/ 来自日本的良心软件
+##### 大牛们的Git-Hub 网站
 
-##### Xcrysden 
+很多懂程序, 喜欢分享的大牛们都有自己的github网址，下面会逐渐完善。
 
-http://www.xcrysden.org/， 用于批量做图，选择K-path做能带图，等。
+1）https://github.com/Ionizing （www.bigbrosci.com这个网站就是这牛人帮忙搭建的）
 
-##### 百宝 
+2）https://github.com/wangvei （VASPkit的作者，王伟老师）
 
-http://openbabel.org/wiki/Main_Page 坐标格式修改。
+3）https://github.com/QijingZheng  （很屌的一个大牛，虽然没见过）
 
-##### 牛掰的个人网站
+4） https://github.com/obaica （只要Follow了他，基本就可以找到其他大牛的github了）
 
-https://github.com/QijingZheng
+5）https://github.com/tamaswells （脚本小王子，the king of sharing）
 
-http://home.ustc.edu.cn/~lipai/scripts/vasp.html
+6）https://github.com/jensengroup  （总有一些人，会默默地支持穷人们的科研）
 
-https://github.com/Ionizing
+7）https://github.com/LePingKYXK
 
-https://github.com/LePingKYXK
-
-https://github.com/tamaswells
+8）http://home.ustc.edu.cn/~lipai/scripts/vasp.html
 
 
 
 #### 理论计算，推荐书籍：
 
-##### Density Functional Theory: A Practical Introduction 
+##### 1） Density Functional Theory: A Practical Introduction 
 
 http://onlinelibrary.wiley.com/book/10.1002/9780470447710 
 
-1）有权限的直接下载；
+有权限的直接下载；没有权限的不要在网上瞎求，很多公式都不全，这个要注意。
 
-2）没有权限的不要在网上瞎求，很多公式都不全，看Learn VASP The hard way （Ex18）里面有下载链接。
-
-##### Atkin's Physical Chemisty （10th）
+##### 2）Atkin's Physical Chemisty （10th）
 
 网上到处都是，最新的是第10版，如果下载不了，看第9版即可。
 
-##### Concepts of Modern Catalysis and Kinetics 
+##### 3）of Modern Catalysis and Kinetics 
 
 做多相催化的强烈建议！http://onlinelibrary.wiley.com/book/10.1002/3527602658 
 
@@ -246,19 +232,61 @@ http://onlinelibrary.wiley.com/book/10.1002/9780470447710
 
 
 
-#### 溶剂
+#### 溶剂相关的：
 
 https://www.organicdivision.org/wp-content/uploads/2016/12/organic_solvents.html
 
 http://murov.info/orgsolvents.htm
 
-#### 其他
 
-##### 颜色数据库：
+
+#### 求职相关
+
+##### Psik Network： http://psi-k.net/
+
+注册后，一旦有人在网络里面发送海外职位信息，你便会收到邮件提醒。更为重要的是，网站里面有很多珍贵的学习资料。
+
+##### Linkedin 领英 https://www.linkedin.com/，
+
+有些老板也会在这上面发布招聘信息，本人当年的博士位置，就是在这里面发现的。 
+
+##### Research gate： https://www.researchgate.net/, 
+
+可以用来下文献，关注同行最新进展。
+
+------
+
+
+
+（七）理论计算，推荐书籍：
+
+1 DFT: A Practical Introduction
+
+ http://onlinelibrary.wiley.com/book/10.1002/9780470447710 
+
+1）有权限的直接下载
+
+2）没有权限的不要在网上瞎求，很多公式都不全，这个要注意。
+
+2 Atkin's Physical Chemisty （10th）
+
+网上到处都是，最新的是第10版，如果下载不了，看第9版即可。
+
+3 Concepts of Modern Catalysis and Kinetics 多相催化的强烈建议！
+
+http://onlinelibrary.wiley.com/book/10.1002/3527602658 
+
+以上书籍，如不提供下载链接，基本都可以在 http://gen.lib.rus.ec/  这个网站获得。
+
+------
+
+其他： 
+
+1 颜色数据库：
 
 https://www.rapidtables.com/web/color/RGB_Color.html 
 
- ##### 元素周期表：
+2 元素周期表：
 
 http://www.rsc.org/periodic-table
 
@@ -266,11 +294,18 @@ https://www.ptable.com/
 
 http://www.periodictable.com/
 
-##### Latex相关：
 
-本人的文章，除合作的外， 基本都是用latex写的，但是推荐网址的话，确实想不起有什么来。
 
-找一个latex入门pdf，练上几天，遇到问题google搜索，慢慢就好了。
+3 Latex相关：
 
-如果非要推荐一个网址的话，那么就选这个： https://tex.stackexchange.com/  和 www.google.com 
+本人的文章，除合作的外， 基本都是用latex写的，但是推荐网址的话，确实想不起有什么来。找一个latex入门pdf，练上几天，遇到问题google搜索，慢慢就好了。如果非要推荐一个网址的话，那么就选这个： https://tex.stackexchange.com/  和 www.google.com 
 
+
+
+------
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/eHmVsslNkaBtAHO0jsHMuK5APDGLDXXL7M3g9VbsIicuyWwcNrwXMnL9cQBsvrIeRFbgNmHiaAlMp1yZTswmcNeA/640?wx_fmt=jpeg)
+
+![img](https://mmbiz.qpic.cn/mmbiz_jpg/eHmVsslNkaBtAHO0jsHMuK5APDGLDXXLjOuXI8VKlV8BECMzI4PehhbehXThX1tysRKCM2tJrEufnh9JwSQ97w/640?wx_fmt=jpeg)
+
+也欢迎大家关注微信公众号
