@@ -3,7 +3,6 @@ title: 浅谈Hall Petch关系(一)
 categories: 
 - 分享
 tags: 
-- 文章
 - Hall Petch
 - ponychen
 date: 2019-10-14 15:30:16
@@ -19,7 +18,7 @@ $\sigma = \sigma_0 + k_{HP}d^{-1/2}$
 
 与此同时，他也在文章中首次提出了试图解释Hall Petch关系的pile up（位错阻塞）模型。
 
-![img](file:///C:/Users/lqlhz/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png)
+![](share04/share042.png)
 
  
 
@@ -43,13 +42,13 @@ $\tau = \tau_i +\surd{\frac{2\tau_c\mu{b}}{1-v}} \times d^{-1/2}$
 
 在pile up模型的基础上，Cotrell（文献2）认为，材料的屈服并非来自于位错林冲破晶界，而是由于位错林在晶界的终端的应力场诱发了邻近晶粒中的位错源(如下图的R处)的开动。这样子需要的 临界应力要小于pile-up模型。
 
-![img](file:///C:/Users/lqlhz/AppData/Local/Temp/msohtmlclip1/01/clip_image015.png)
+![](share04/share047.png)
 
  
 
 晶粒内部出现位错源固然可行，但是另一方面，晶界本身就是天生的位错源，在晶粒内部没有经受剧烈变形的情况下，晶界上的位错形核位置要远远多于晶粒内部。Li （文献3）于1963年提出了boundary source（晶界位错源）模型。为了方便起见，我们不妨假设晶粒是边长为d的立方体。假设晶粒的每一个面上的台阶密度为m，假设每一个台阶都有一定几率发射位错。进一步简化，我们不妨认为每个台阶都会发射位错，则一个面的总位错数目为$md^2$。每一个晶粒与毗邻晶粒公用一个晶面，则一个晶粒可以认为有三个晶界面属于这个晶粒。所以:
 
-![img](file:///C:/Users/lqlhz/AppData/Local/Temp/msohtmlclip1/01/clip_image019.png)
+![](share04/share048.png)
 
  
 
@@ -69,9 +68,7 @@ $\sigma = \sigma_0 + M\alpha\mu{b}3^{1/2}m^{1/2}d^{-1/2}$
 
 值得注意的是，在2002年的一篇文章4中，该文作者成功在MD模拟中发现了晶界处位错的形核和发射过程。
 
-![img](file:///C:/Users/lqlhz/AppData/Local/Temp/msohtmlclip1/01/clip_image027.png)
-
- 
+![](share04/share0412.png)
 
 （未完待续）
 
