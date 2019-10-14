@@ -39,3 +39,28 @@ $\tau = \tau_i +\surd{\frac{2\tau_c\mu{b}}{1-v}} \times d^{-1/2}$
 
 该公式看起来非常合理简洁，-1/2次方的关系也出来了。但是如果材料的屈服依靠的是位错像裂纹一般冲破晶界，我们应该在实验中大量发现，但实际上，只有少数几篇文献报导过相关现象。更重要的是，依据该理论计算的屈服强度跟实际数据还是有较大出入。
 
+在pile up模型的基础上，Cotrell（文献2）认为，材料的屈服并非来自于位错林冲破晶界，而是由于位错林在晶界的终端的应力场诱发了邻近晶粒中的位错源(如下图的R处)的开动。这样子需要的 临界应力要小于pile-up模型。
+![](share04/share047.png)
+晶粒内部出现位错源固然可行，但是另一方面，晶界本身就是天生的位错源，在晶粒内部没有经受剧烈变形的情况下，晶界上的位错形核位置要远远多于晶粒内部。Li （文献3）于1963年提出了boundary source（晶界位错源）模型。为了方便起见，我们不妨假设晶粒是边长为d的立方体。假设晶粒的每一个面上的台阶密度为m，假设每一个台阶都有一定几率发射位错。进一步简化，我们不妨认为每个台阶都会发射位错，则一个面的总位错数目为$md^2$。每一个晶粒与毗邻晶粒公用一个晶面，则一个晶粒可以认为有三个晶界面属于这个晶粒。所以:
+![](share04/share048.png)
+我们可以认为一个晶粒有3$md^2$个位错。这些位错在外加应力作用下继续向晶内扩散，形成位错林。位错林的密度为:
+$\rho = 3md^2 / d^3 = 3m/d$
+另一方面，晶体材料的位错密度和强度之间可以由著名的Taylor公式来描述:
+$\sigma = \sigma_0 + M\alpha\mu{b}\surd\rho$ 
+代入前者即得:
+
+$\sigma = \sigma_0 + M\alpha\mu{b}3^{1/2}m^{1/2}d^{-1/2}$ 
+
+我们再一次获得了Hall Petch关系。在原文中也有说明这个方式计算的理论屈服强度与pile up模型基本一致。目前介绍的这两个模型，前者认为位错完全起源于晶粒内部，后者则认为位错完全起源于晶界，两者分别是实际情况下的两个极端。但是殊途同归，两个极端最后得到了相同的结论和近似的屈服强度。不过，这两个模型的局限性也是明显的，实验中Hall Petch曲线的斜率对晶粒结构和化学成分非常敏感，但是上述模型中并未考虑这些实际因素。
+
+值得注意的是，在2002年的一篇文章4中，该文作者成功在MD模拟中发现了晶界处位错的形核和发射过程。
+
+![](share04/share0412.png)
+
+（未完待续）
+
+1 Hall, E. O. The deformation and ageing of mild steel: III discussion of results. Proceedings of the Physical Society. Section B 64.9 (1951): 747.
+2  A.H. Cottrell,: The Mechanical Properties of Matter, Wiley, New York (1964) 
+3 Li, James CM. Petch relation and grain boundary sources. Transactions of the Metallurgical Society of AIME 227.1 (1963): 239.
+4 Van Swygenhoven, H., P. M. Derlet, and A. Hasnaoui. Atomic mechanism for dislocation emission from nanosized grain boundaries. Physical Review B 66.2 (2002): 024101.
+本文经ponychen授权发布，版权属于ponychen。
