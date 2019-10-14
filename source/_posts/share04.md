@@ -13,7 +13,7 @@ Hall Petch关系是材料学中描述多晶材料最为重要的一个相关关�
 
 1951年，Hall（文献1）发表的论文中首次报导了钢中存在的Hall Petch关系:
 
-$\sigma=\sigma_0 + k{_{HP}}d^{-1/2} $
+$\sigma=\sigma_0 + k_{HP}d^{-1/2} $
 
 其中$\sigma$表示流变应力，d表示晶粒尺寸，k是Hall Petch 系数，其对不同材料，温度和应变条件都非常敏感。
 
