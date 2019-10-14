@@ -13,7 +13,7 @@ Hall Petch关系是材料学中描述多晶材料最为重要的一个相关关�
 
 1951年，Hall（文献1）发表的论文中首次报导了钢中存在的Hall Petch关系:
 
-$\sigma = \sigma_0 + k_{HP}d^{-1/2}$ 
+$\sigma=\sigma_0+k_{HP}d^{-1/2}$
 
 其中$\sigma$表示流变应力，d表示晶粒尺寸，k是Hall Petch 系数，其对不同材料，温度和应变条件都非常敏感。
 
@@ -59,8 +59,8 @@ $\sigma = \sigma_0 + M\alpha\mu{b}3^{1/2}m^{1/2}d^{-1/2}$
 
 （未完待续）
 
-1 Hall, E. O. "The deformation and ageing of mild steel: III discussion of results." *Proceedings of the Physical Society. Section B* 64.9 (1951): 747.
+1 Hall, E. O. The deformation and ageing of mild steel: III discussion of results. *Proceedings of the Physical Society. Section B* 64.9 (1951): 747.
 2  A.H. Cottrell,: The Mechanical Properties of Matter, Wiley, New York (1964) 
-3 Li, James CM. "Petch relation and grain boundary sources." *Transactions of the Metallurgical Society of AIME* 227.1 (1963): 239.
-4 Van Swygenhoven, H., P. M. Derlet, and A. Hasnaoui. "Atomic mechanism for dislocation emission from nanosized grain boundaries." *Physical Review B* 66.2 (2002): 024101.
+3 Li, James CM. Petch relation and grain boundary sources. *Transactions of the Metallurgical Society of AIME* 227.1 (1963): 239.
+4 Van Swygenhoven, H., P. M. Derlet, and A. Hasnaoui. Atomic mechanism for dislocation emission from nanosized grain boundaries. *Physical Review B* 66.2 (2002): 024101.
 本文经ponychen授权发布，版权属于ponychen。
