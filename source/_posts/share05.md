@@ -41,3 +41,7 @@ mathjax: true
 
 实际上，在复合模型之后材料学家依旧提出了大量的理论模型，其目的也不仅仅是在于解释Hall Petch关系。由于篇幅所限，本文仅仅介绍了一些具有代表性的模型。实际上，从实验的角度来说，很多材料也并非严格遵循Hall Petch关系中-1/2指数，该指数存在一个很大的范围。对于我们来说，-1/2只是代表材料强度与晶粒尺寸联系的一个优美符号。
 
+1. Meakin, J., and N. J. Petch. "Report ASD-TDR-63-324." *Symposium on the Role of Substructure in the Mechanical Behavior of Metals,(ASD-7DR-63-324, Orlando, 1963) pp*. 1963.
+2. Ashby, M. F. "The deformation of plastically non-homogeneous materials." *The Philosophical Magazine: A Journal of Theoretical Experimental and Applied Physics*21.170 (1970): 399-424.
+3. Meyersm, Marc A., and E. Ashworth. "A model for the effect of grain size on the yield stress of metals." *Philosophical Magazine A* 46.5 (1982): 737-759.
+4. Kato, Masaharu. "Hall–Petch relationship and dislocation model for deformation of ultrafine-grained and nanocrystalline metals." *Materials Transactions* 55.1 (2014): 19-24.
