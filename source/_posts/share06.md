@@ -12,7 +12,7 @@ mathjax: true
 
 在线弹性理论中，体系被施加一个无穷小的应变，从而体系应变后的能量可以以小应变为自变量泰勒展开，并忽略二阶导以上的高阶项。通过对不同特定的独立的应变模式求解能量应变方程或者应力应变方程，我们可以获得材料所有的二阶弹性常数（SOECs）。SOECs反映了体系的简谐弹性特征。通过SOECs，一方面我们可以获得体系的基于Vogit-Reuss-Hill平均的多晶力学性能，包括杨氏模量，剪切模量，体积模量，泊松比和维氏硬度等，以及在此基础之上的各向异性系数等等特征；另一方面，我们也可以通过SOECs获得单晶力学性能在空间中的具体分布，并将其用图的模式直观的表示出来。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/eHmVsslNkaABGopX0fuF1Tag3z1FUb6k3EeDfibX0z8RMyxj4rqdx6DXibVlnJrQxCVbUNJ6sF8MWictjFT9SaQmQ/640?wx_fmt=png)
+![](share06/share061.png)
 
 图中我们展示了某种金属的杨氏模量和剪切模量（每个面的平均值）的空间分布图，感兴趣的读者可以猜猜这是哪种布拉维晶型的金属。
 
