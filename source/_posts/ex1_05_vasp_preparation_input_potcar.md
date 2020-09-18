@@ -114,7 +114,7 @@ https://cms.mpi.univie.ac.at/vasp/vasp/Recommended_PAW_potentials_DFT_calculatio
 cat ~/pot/Al/POTCAR ~/pot/C/POTCAR ~/pot/H/POTCAR >POTCAR
 ```
 
-通过这一行命令就可以把Al，C，H各自的POTCAR结合在一起。OTCAR中的元素顺序一定要和POSCAR保持一致,否则计算会出错，为了避免计算出错，还有一些高级的方法，这个在后面会慢慢讲解。
+通过这一行命令就可以把Al，C，H各自的POTCAR结合在一起。OUTCAR中的元素顺序一定要和POSCAR保持一致,否则计算会出错，为了避免计算出错，还有一些高级的方法，这个在后面会慢慢讲解。
 
 本节讲的是O原子的计算，官网推荐的氧原子POTCAR，默认的截断能是400，价层有6个原子。直接把O这个文件夹中的POTCAR直接复制到INCAR所在的目录即可。
 
