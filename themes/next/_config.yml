@@ -360,7 +360,7 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: bigbrosci-com      ## e.g. wuchong   your disqus short name.
   count: true
 
