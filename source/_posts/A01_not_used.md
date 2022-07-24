@@ -1,5 +1,5 @@
 ---
-title: 通过Ubuntu连接服务器的方法
+title: 通过Ubuntu连接国科智算的方法
 categories: 
 - LVASPTHW附录
 tags: 
